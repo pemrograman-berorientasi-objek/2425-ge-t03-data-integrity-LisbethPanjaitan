@@ -12,7 +12,6 @@ import java.util.Scanner;
  * @author 12S23041 - Lisbeth Panjaitan 
  * @author 12S23021 - Eunike Purba
  */
-
 public class Driver1 {
 
     public static void main(String[] _args) {

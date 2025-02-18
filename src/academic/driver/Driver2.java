@@ -27,6 +27,9 @@ public class Driver2 {
                 break;
             } else {
                 String[] tokens = str.split("#");
+                if (tokens.length < 5) {
+                    continue; // Skip invalid input
+                }
                 String command = tokens[0];
                 switch (command) {
                     case "course-add":
@@ -92,16 +95,15 @@ public class Driver2 {
                 }
             }
         }
-        Collections.sort(courses,Comparator.comparing(Course::getCode));
+
+        Collections.sort(courses, Comparator.comparing(Course::getCode));
         for (Course course : courses) {
             System.out.println(course.getCode() + "|" + course.getName() + "|" + course.getCredits() + "|" + course.getGrade());
         }
-        
 
         for (Student student : students) {
             System.out.println(student.getId() + "|" + student.getName() + "|" + student.getYear() + "|" + student.getMajor());
         }
-
 
         for (Enrollment enrollment : enrollments) {
             System.out.println(enrollment.getCourseId() + "|" + enrollment.getStudentId() + "|" + enrollment.getAcademicYear() + "|" + enrollment.getSemester() + "|None");
