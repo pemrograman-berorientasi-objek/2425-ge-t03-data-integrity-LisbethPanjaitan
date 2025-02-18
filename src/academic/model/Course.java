@@ -1,9 +1,10 @@
 package academic.model;
 
 /**
- * Represents a course in the academic simulator.
- * Authors: 12S23041 - Lisbeth Panjaitan, 12S23021 - Eunike Purba
+ * @author 12S23041 - Lisbeth Panjaitan 
+ * @author 12S23021 - Eunike Purba
  */
+
 public class Course {
     private String code;
     private String name;

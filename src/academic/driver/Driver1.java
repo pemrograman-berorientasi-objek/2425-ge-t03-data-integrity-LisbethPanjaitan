@@ -28,6 +28,9 @@ public class Driver1 {
                 break;
             } else {
                 String[] tokens = str.split("#");
+                if (tokens.length < 5) {
+                    continue; // Skip invalid input
+                }
                 String command = tokens[0];
                 switch (command) {
                     case "course-add":
@@ -93,7 +96,8 @@ public class Driver1 {
                 }
             }
         }
- Collections.sort(courses,Comparator.comparing(Course::getCode));
+
+        Collections.sort(courses, Comparator.comparing(Course::getCode));
         for (Course course : courses) {
             System.out.println(course.getCode() + "|" + course.getName() + "|" + course.getCredits() + "|" + course.getGrade());
         }
