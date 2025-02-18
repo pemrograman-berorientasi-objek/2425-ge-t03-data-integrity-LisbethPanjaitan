@@ -1,4 +1,4 @@
-package academic.model;
+package academic.model; 
 
 /**
  * @author 12S23041 - Lisbeth Panjaitan 
